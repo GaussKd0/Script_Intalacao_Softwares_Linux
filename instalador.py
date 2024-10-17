@@ -57,7 +57,7 @@ snaps = [
     
 ]
 
-#ferramentas pentest, hacking, seguranca
+#ferramentas pentest, hacking, seguranca(arch linux)
 ferramantasHackerA = [
     "sudo pacman -S hydra",
     "sudo pacman -S nmap",
@@ -77,7 +77,7 @@ ferramantasHackerA = [
 
 
 
-#array com todos os softwares que seram instalados baseados em debian
+#array com os gerenciadores de pacotes snaps e flatpaks para facilitar a instalação em sistemas baseados em debian
 debian = [
     "sudo apt update",
     "sudo apt install -y snapd",
@@ -91,7 +91,7 @@ debian = [
 ]
 
 
-#array com todos os softwares que seram instalados baseados em arch
+#array com os gerenciadores de pacotes snaps e flatpaks para facilitar a instalação em sistemas baseados em arch
 arch = [
     "sudo pacman -Syu",
     "git clone https://aur.archlinux.org/snapd.git",
@@ -103,7 +103,7 @@ arch = [
     "sudo pacman -S flatpak",
 ]
 
-#array com todos os softwares que seram instalados baseados em fedora
+#array com os gerenciadores de pacotes snaps e flatpaks para facilitar a instalação em sistemas baseados em fedora
 fedora = [
   "sudo dnf check-update",
   "sudo dnf upgrade",
