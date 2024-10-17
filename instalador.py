@@ -113,7 +113,7 @@ fedora = [
 
 ]
 
-
+#loop do menu, enquanto for verdadeiro, mostra as informações para que não ocorra nenhum problema na instalação
 while(True):
     res = input("Distro baseada em A(Arcsh Linux) D(Debian) F(Fedora) C(Cancelar): ").strip().lower()
     if res == "a":
@@ -137,6 +137,7 @@ while(True):
     else:
         print("Comando digitado incorreto!!")
 
+#loop para escrever os comandos no terminal
 for comando in array:
     print(comando)
     time.sleep(1)
