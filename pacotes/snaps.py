@@ -1,5 +1,5 @@
 def snaps():
-    #Nessa lista podemos adicionar e remover snaps
+    #lista com snaps podemos adicionar e remover pacotes de acordo com nossa necessidade
     snaps = [
         "sudo snap install code --classic",
         "sudo snap install insomnia",

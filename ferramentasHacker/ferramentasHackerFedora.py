@@ -1,5 +1,4 @@
-import time
-from ferramentasHacker import ferramentasHackerYay
+#ferramentas hacker para distros baseadas em fedora
 def ferramentas():
     ferramantas = [
         "sudo dnf install hydra",
@@ -21,9 +20,4 @@ def ferramentas():
         "sudo ln -s ~/metasploit-framework/msfconsole /usr/local/bin/msf",
 
     ]
-    ferramantas += ferramentasHackerYay.yay() ;
     return ferramantas
-
-def Mensagem():
-    time.sleep(2)
-    print("mestasploit sera configurado pra executar como msf")

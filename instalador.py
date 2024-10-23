@@ -4,6 +4,7 @@ from  pacotes import flatpaks
 from  pacotes import snaps
 from  ferramentasHacker import ferramentasHackerArch
 from  ferramentasHacker import ferramentasHackerFedora
+from  ferramentasHacker import ferramentasHackerDebian
 from  sistemas import debian
 from  sistemas import arch
 from  sistemas import fedora
@@ -14,13 +15,14 @@ flatpaks = flatpaks.flatpaks()
 snaps = snaps.snaps()
 ferramentasHackerArch = ferramentasHackerArch.ferramentas()
 ferramentasHackerFedora = ferramentasHackerFedora.ferramentas()
+ferramentasHackerDebian = ferramentasHackerDebian.ferramentas()
 
 #sistemas  
 debian = debian.debian()
 arch = arch.arch()
 fedora = fedora.fedora()
 
-
+#arrays de inclusao
 array = []
 inclusao = []
 sistema = []
@@ -32,12 +34,12 @@ def Limpar():
 #funcao incluir dependencias
 def IncluirDependencias(array, sistema):
     
-    array += sistema;
+    array += sistema
 
     res = input("Deseja Incluir Flatpaks? Digite S: ").strip().lower()
 
     if res == "s":
-        array += flatpaks;
+        array += flatpaks
         
     Limpar()   
     res = input("Deseja Incluir Snaps? Digite S: ").strip().lower()
@@ -52,14 +54,17 @@ while(True):
         Limpar()
         res = input("Deseja Incluir Ferramentas Hackeres? se deseja incluir digite S: ").strip().lower()
         if res == "s":
-            time.sleep(2)
-            print("mestasploit sera configurado pra executar como msf")
-            array += ferramentasHackerArch;
+            array += ferramentasHackerArch
         IncluirDependencias(array, arch)
         break
 
     elif res == "d":
         Limpar()
+        res = input("Deseja Incluir Ferramentas Hackeres? se deseja incluir digite S: ").strip().lower()
+        if res == "s":
+            time.sleep(2)
+            print("mestasploit sera configurado pra executar como msf")
+            array += ferramentasHackerDebian
         IncluirDependencias(array, debian)
         break
 
@@ -67,9 +72,11 @@ while(True):
         Limpar()
         res = input("Deseja Incluir Ferramentas Hackeres? se deseja incluir digite S: ").strip().lower()
         if res == "s":
-            array += ferramentasHackerFedora;
+            time.sleep(2)
+            print("mestasploit sera configurado pra executar como msf")
+            array += ferramentasHackerFedora
         IncluirDependencias(array, fedora)
-        break;
+        break
     elif res == "c":
         break
 

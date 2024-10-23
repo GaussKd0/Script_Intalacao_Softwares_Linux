@@ -1,4 +1,5 @@
 def debian():
+    #array com os gerenciadores de pacotes snaps e flatpaks para facilitar a instalação em sistemas baseados em debian
     debian = [
         "sudo apt update",
         "sudo apt install -y snapd",
@@ -8,5 +9,6 @@ def debian():
         "sudo apt update",
         "sudo apt install -y flatpak",
         "sudo apt install -y gnome-software-plugin-flatpak",
+        "sudo apt install nodejs npm"
     ]
     return debian

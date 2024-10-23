@@ -1,8 +1,12 @@
-from ferramentasHacker import ferramentasHackerYay
-
+#ferramentas hacker para distros baseadas em arch
 def ferramentas():
     
     ferramantas = [
+        "yay -S burpsuite",
+        "yay -S sqlmap",
+        "yay -S social-engineer-toolkit",
+        "yay -S beef",
+        "yay -S fern-wifi-cracker",
         "sudo pacman -S hydra",
         "sudo pacman -S nmap",
         "sudo pacman -S john",
@@ -14,5 +18,4 @@ def ferramentas():
         "bundle install",
 
     ]
-    ferramantas += ferramentasHackerYay.yay() 
     return ferramantas
